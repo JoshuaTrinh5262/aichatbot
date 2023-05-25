@@ -3,3 +3,4 @@ aichat/node_modules/
 Server/CoreAI/__pycache__/
 aichat/yarn.lock
 aichat/package-lock.json
+Server/.env
