@@ -1,7 +1,8 @@
 from urllib import response
 from CoreAI.ChatGPT import ChatGPT
-from flask import Flask, jsonify, request, Response
+from flask import Flask, jsonify, request
 from flask_cors import CORS
+
 app = Flask(__name__)
 CORS(app)
 

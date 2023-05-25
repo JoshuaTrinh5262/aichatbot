@@ -1,12 +1,14 @@
 import openai
-import os
+import dotenv
 
 class ChatGPT: 
     vopenai = openai
+    
     # Constructor (initialize instance)
     def __init__(self):
         # Instance attributes
-        self.vopenai.api_key = "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"
+        config = dotenv.dotenv_values(".env")
+        self.vopenai.api_key = config['OPENAI_API_KEY']
 
     # print(store_conversation)
     def CustomChatGPT(self, user_input, store_conversation):
