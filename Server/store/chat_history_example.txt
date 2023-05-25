@@ -22,3 +22,13 @@ User: 6. Pour the batter into an ungreased 10-inch tube pan or bundt cake pan, s
 User: 7. Invert the cooked cake onto a wire rack, loosening the edges if needed. Allow the cake to cool for 45 minutes to one hour.
 User: 8. Lightly sift confectioners sugar over the cake. You can use a stencil to create a design or cover the entire top.
 User: 9. Slice the cake and enjoy!
+Joshua: Herte is the list of mosquito population control and Wolbachia virus management
+Joshua: 1.Proceed to set traps in various positions to catch mosquitoes, effectively reducing their population.
+Joshua: 2.After capturing the mosquitoes, they will be raised in a controlled environment, commonly known as a factory.
+Joshua: 3.Facilitate mosquito mating to introduce and propagate the Wolbachia virus among the mosquito population.
+Joshua: 4.Set traps to release the mosquitoes back into the environment.
+Joshua: 5.After releasing the mosquitoes, those infected with the Wolbachia virus will mate and spread the virus to other mosquitoes in the external environment.
+Joshua: 6.After a certain period of time, recapture mosquitoes and set traps at different locations to catch them.
+Joshua: 7.Upon capturing the mosquitoes, classify them into different types.
+Joshua: 8.Conduct testing to determine whether the mosquitoes carry the Wolbachia virus or not.
+Joshua: 9.Compile the collected data and present it in the report of the Core Data.

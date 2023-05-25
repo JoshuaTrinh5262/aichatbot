@@ -13,12 +13,60 @@ User: Good morning
 AI: Good morning! I'm an AI chatbot programmed to help answer your questions. How can I help you?
 User: In this scenario, the AI acts as a helpful assistant providing information to the user on how to bake a cake. The AI guides the user through a series of steps, starting with gathering the necessary ingredients and preheating the oven. The user is instructed to mix the dry ingredients separately and beat the egg whites until stiff. The AI then explains how to gradually add sugar, incorporate flavorings, and fold in the flour mixture. The user is advised to pour the batter into a specific type of pan and bake it at the appropriate temperature. Once the cake is baked, the AI assists in inverting and cooling it before sifting confectioners sugar over the top. Finally, the AI concludes by encouraging the user to slice the cake and enjoy the delicious homemade creation. Throughout the process, the AI is ready to provide guidance and answer any questions the user may have, ensuring a successful baking experience.
 User: Here is 9 step to make a cake
-User: 1. Gather ingredients (1 cup cake flour, 1 1/2 cups sugar, 10 eggs at room temperature, 1 1/4 teaspoons cream of tartar, 1/4 teaspoon salt, 1 teaspoon vanilla extract, 1/4 teaspoon almond extract, 1/3 cup confectioner's sugar for top of cake), pre-heat oven to 325°F, and grease cake pans.
+User: 1. Gather ingredients (1 cup cake flour, 1 1/2 cups sugar, 10 eggs at room temperature, 1 1/4 teaspoons cream of tartar, 1/4 teaspoon salt, 1 teaspoon vanilla extract, 1/4 teaspoon almond extract, 1/3 cup confectioner's sugar for top of cake), pre-heat oven to 325Ãƒâ€šÃ‚Â°F, and grease cake pans.
 User: 2. Mix 1 cup of cake flour with 1/2 cup of sugar in a bowl. Set aside.
 User: 3. Separate egg whites from yolks, one egg at a time, in different bowls. Discard yolks. Beat the egg whites from 10 eggs on high speed until stiff. Gradually add 1 1/4 teaspoons of cream of tartar and 1/4 teaspoon of salt, beating for about one minute.
 User: 4. While still mixing the egg whites, gradually add the remaining 1 cup of sugar. Remove the bowl from the mixer and stir in 1 teaspoon of vanilla extract and 1/4 teaspoon of almond extract.
 User: 5. Fold the prepared cake flour mixture (1 cup of cake flour mixed with 1/2 cup of sugar) into the egg white mixture in batches of 1/2 cup at a time.
-User: 6. Pour the batter into an ungreased 10-inch tube pan or bundt cake pan, smooth the top, and bake at 325°F for 50 to 55 minutes until nicely browned. Remove from the oven.
+User: 6. Pour the batter into an ungreased 10-inch tube pan or bundt cake pan, smooth the top, and bake at 325Ãƒâ€šÃ‚Â°F for 50 to 55 minutes until nicely browned. Remove from the oven.
 User: 7. Invert the cooked cake onto a wire rack, loosening the edges if needed. Allow the cake to cool for 45 minutes to one hour.
 User: 8. Lightly sift confectioners sugar over the cake. You can use a stencil to create a design or cover the entire top.
 User: 9. Slice the cake and enjoy!
+Joshua: Herte is the list of mosquito population control and Wolbachia virus management
+Joshua: 1.Proceed to set traps in various positions to catch mosquitoes, effectively reducing their population.
+Joshua: 2.After capturing the mosquitoes, they will be raised in a controlled environment, commonly known as a factory.
+Joshua: 3.Facilitate mosquito mating to introduce and propagate the Wolbachia virus among the mosquito population.
+Joshua: 4.Set traps to release the mosquitoes back into the environment.
+Joshua: 5.After releasing the mosquitoes, those infected with the Wolbachia virus will mate and spread the virus to other mosquitoes in the external environment.
+Joshua: 6.After a certain period of time, recapture mosquitoes and set traps at different locations to catch them.
+Joshua: 7.Upon capturing the mosquitoes, classify them into different types.
+Joshua: 8.Conduct testing to determine whether the mosquitoes carry the Wolbachia virus or not.
+Joshua: 9.Compile the collected data and present it in the report of the Core Data.
+User: tell me about mosquito management and it's step
+AI: Mosquito management is the process of controlling the population of mosquitoes in a given area. The most effective method of mosquito management is to introduce the Wolbachia virus, which is a naturally occurring bacteria found in some species of mosquitoes. The steps involved in mosquito management and Wolbachia virus management are as follows: 1) set traps to capture mosquitoes; 2) raise the mosquitoes in a controlled environment; 3) facilitate mosquito mating to introduce and propagate the Wolbachia virus; 4) set traps to release the infected mosquitoes back into the environment; 5) recapture mosquitoes and set traps at different locations; 6) classify the mosquitoes into different types; 7) conduct testing to determine if the mosquitoes carry the Wolbachia virus; and 8) compile the collected data and present it in a report.
+User: nice
+thank you
+AI: You're welcome! Is there anything else I can help you with?
+User: no
+thank you
+AI: No problem! Have a great day!
+User: how many people are there in the chat ?
+AI: I'm sorry, I'm not able to answer that question.
+User: is joshua in the chat
+AI: No, Joshua is not in this chat.
+User: how many people are there in this chatbox ?
+AI: I'm sorry, I'm not able to answer that question.
+User: is joshua here
+AI: No, Joshua is not in this chat.
+User: is user in this chat
+AI: Yes, you are the user in this chat.
+User: how many user are there in the chat ?
+AI: There is just one user in this chat - you!
+User: but joshua is here
+AI: No, Joshua is not in this chat.
+User: but joshua is here
+AI: No, Joshua is not in this chat.
+User: hello
+AI: Hello there! How can I help you?
+User: what did i miss
+AI: You didn't miss anything, I'm just here to answer any questions you have.
+User: am i joshua
+AI: No, you are not Joshua.
+User: then what am i
+AI: You are the user in this chat.
+User: what am i 
+AI: You are the user in this chat.
+User: how many user are there in the chat ?
+AI: There is just one user in this chat - you!
+User: where is joshua
+AI: Joshua is not in this chat.
