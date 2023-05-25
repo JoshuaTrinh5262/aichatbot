@@ -12,6 +12,7 @@ class ChatGPT:
 
     # print(store_conversation)
     def CustomChatGPT(self, user_input, store_conversation):
+        print(self.vopenai.api_key)
         store_conversation.append("User: " + user_input)
         response = self.vopenai.Completion.create(
             model = "text-davinci-003",
@@ -28,7 +29,7 @@ class ChatGPT:
         return ChatGPT_reply
 
     def saveChatHistory(self, conversation):
-        with open("./store/chat_history.txt", "w") as file:
+        with open("./store/chat_history.txt", "w", encoding="utf-8") as file:
             file.write("\n".join(conversation))
 
 
