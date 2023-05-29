@@ -6,6 +6,7 @@
 <div class="messageBox mt-8">
   <template v-for="(message, index) in messages" :key="index">
     <div :class="message.from == 'user' ? 'messageFromUser' : 'messageFromChatGpt'">
+      <img style="background: #6c6c60" :src="message.from == 'user' ? user : bot">
       <div :class="message.from == 'user' ? 'userMessageWrapper' : 'chatGptMessageWrapper'">
         <div :class="message.from == 'user' ? 'userMessageContent' : 'chatGptMessageContent'">{{ message.data }}</div>
       </div>
@@ -18,6 +19,7 @@
     type="text"
     class="messageInput"
     placeholder="Ask me anything..."
+    @keyup.enter="sendMessage(currentMessage)"
   />
   <button
     @click="sendMessage(currentMessage)"
@@ -32,6 +34,8 @@
 
 <script>
 import axios from 'axios';
+import bot from './../images/bot.svg'
+import user from './../images/user.svg'
 
 export default {
   name: 'ChatBox',
@@ -39,10 +43,13 @@ export default {
     return {
       currentMessage: '',
       messages: [],
+      bot,
+      user,
     };
   },
   methods: {
     async sendMessage(message) {
+      this.currentMessage = '';
       this.messages.push({
         from: 'user',
         data: message,
@@ -68,14 +75,13 @@ export default {
 
 .chatbox-container {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  top: 0;
+  right: 2px;
   z-index: 1000;
 }
 
 .container {
-  width: 360px;
-  height: 600px;
+  height: 800px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -112,7 +118,7 @@ h1 {
 
 
 .messageBox {
-  max-height: 400px;
+  max-height: 700px;
   overflow-y: auto;
   padding: 0 16px;
   border-top: 1px solid #f0f0f0;
@@ -130,6 +136,7 @@ h1 {
 .chatGptMessageWrapper {
   display: flex;
   flex-direction: column;
+  margin-left: 5px;
 }
 
 .userMessageWrapper {
@@ -142,7 +149,6 @@ h1 {
 
 .userMessageContent,
 .chatGptMessageContent {
-  max-width: 60%;
   padding: 8px 12px;
   border-radius: 18px;
   margin-bottom: 2px;
@@ -219,9 +225,9 @@ h1 {
   }
 }
 .chatbox-container {
+  width: 100%;
   position: fixed;
   bottom: 24px;
-  right: 24px;
   z-index: 1000;
 }
 
