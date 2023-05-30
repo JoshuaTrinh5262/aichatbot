@@ -6,7 +6,7 @@
 <div class="messageBox mt-8">
   <template v-for="(message, index) in messages" :key="index">
     <div :class="message.from == 'user' ? 'messageFromUser' : 'messageFromChatGpt'">
-      <img style="background: #6c6c60" :src="message.from == 'user' ? user : bot">
+      <img style="background: #6c6c60; padding: 8px; border-radius: 18px; height: 18px" :src="message.from == 'user' ? user : bot">
       <div :class="message.from == 'user' ? 'userMessageWrapper' : 'chatGptMessageWrapper'">
         <div :class="message.from == 'user' ? 'userMessageContent' : 'chatGptMessageContent'">{{ message.data }}</div>
       </div>
