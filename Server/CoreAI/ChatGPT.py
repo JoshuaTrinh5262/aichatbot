@@ -29,7 +29,7 @@ class ChatGPT:
         return ChatGPT_reply
 
     def saveChatHistory(self, conversation):
-        with open("./store/chat_history.txt", "w", encoding="utf-8") as file:
+        with open("./server/store/chat_history.txt", "w", encoding="utf-8") as file:
             file.write("\n".join(conversation))
 
 
