@@ -7,11 +7,11 @@ import re
 
 import domain_extraction
 
-config = dotenv.dotenv_values(".env")
+config = dotenv.dotenv_values("./.env")
 url = config['URL']
 domain = domain_extraction.get_domain_from_url(url)
 # Path to the downloaded ChromeDriver executable
-driver_path = '/'
+driver_path = './crawling/'
 
 # Create a Service object
 service = Service(driver_path)

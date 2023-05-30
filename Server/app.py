@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Open the text file in read mode
-with open("store/chat_history.txt", "r") as file:
+with open("server/store/chat_history.txt", "r") as file:
     # Read all lines from the file into a list
     lines = file.readlines()
 

@@ -24,7 +24,7 @@ import domain_extraction
 # Regex pattern to match a URL
 HTTP_URL_PATTERN = r'^http[s]{0,1}://.+$'
 
-config = dotenv.dotenv_values(".env")
+config = dotenv.dotenv_values("./.env")
 
 # Define root domain to crawl
 full_url = config['FULL_URL']

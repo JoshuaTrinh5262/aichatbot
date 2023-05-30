@@ -3,11 +3,11 @@ import dotenv
 
 class ChatGPT: 
     vopenai = openai
-    
+
     # Constructor (initialize instance)
     def __init__(self):
         # Instance attributes
-        config = dotenv.dotenv_values(".env")
+        config = dotenv.dotenv_values("./.env")
         self.vopenai.api_key = config['OPENAI_API_KEY']
 
     # print(store_conversation)
