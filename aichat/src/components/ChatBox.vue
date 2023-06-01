@@ -82,13 +82,14 @@ export default {
         data: message,
       });
       await axios
-        .post('http://127.0.0.1:5000/api/chatgpt', {
+        .post('http://127.0.0.1:5000/api/chatgptbyindex', {
           prompt: message,
         })
        .then((response) => {
+        console.log(response.data.response)
         this.messages.push({
           from: 'chatGpt',
-          data: response.data, // Access the 'data' property of the response object
+          data: response.data.response, // Access the 'data' property of the response object
         });
       });
     },

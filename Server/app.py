@@ -22,13 +22,22 @@ def index():
     response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
     return response
 
+#  Post chatgpt by indext
+@app.route('/api/chatgptbyindex', methods=['Post'])
+def post_chatgptbyindex():
+    data = request.get_json()  # Get JSON data from the request body
+    print(data['prompt'])
+    data = chat.CustomChatGptByIndex(data['prompt'], store_conversation)
+    response = jsonify(data)
+    response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
+    return response
+
 # Post chatgpt
 @app.route('/api/chatgpt', methods=['Post'])
 def post_chatgpt():
     data = request.get_json()  # Get JSON data from the request body
     print(data['prompt'])
     data = chat.CustomChatGPT(data['prompt'], store_conversation)
-    print(data)
     response = jsonify(data)
     response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
     return response
