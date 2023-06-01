@@ -5,3 +5,4 @@ aichat/yarn.lock
 aichat/package-lock.json
 .env
 crawling/__pycache__/domain_extraction.cpython-311.pyc
+.env
