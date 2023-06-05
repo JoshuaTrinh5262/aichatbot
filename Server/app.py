@@ -22,12 +22,6 @@ index_store_conversation = [line.strip() for line in index_lines]
 
 chat = ChatGPT()
 
-@app.route('/')
-def index():
-    # response = Response('Hello, World!')
-    response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
-    return response
-
 #  Post chatgpt by index
 @app.route('/api/chatgptbyindex', methods=['Post'])
 def post_chatgptbyindex():
@@ -47,18 +41,6 @@ def post_chatgpt():
     response = jsonify(data)
     response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
     return response
-
-# Post chatgpt
-@app.route('/api/testchatgpt', methods=['Post'])
-def post_testchatgpt():
-    data = request.get_json()  # Get JSON data from the request body
-    # print(data['prompt'])
-    # data = chat.CustomChatGPT(data['prompt'], store_conversation)
-    # data = chat.testapi()
-    print(data)
-    response = jsonify(data)
-    response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
-    return response    
 
 if __name__ == '__main__':
     app.run(debug=True) 
