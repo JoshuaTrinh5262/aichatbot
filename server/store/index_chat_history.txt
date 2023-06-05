@@ -1,0 +1,53 @@
+User: does batman bite ?
+Ai:
+No, Batman does not bite. Bats are not mosquitoes and do not have the ability to bite humans or animals.
+User: does elon musk bite ?
+Ai:
+No, Elon Musk does not bite.
+User: who is elon musk ?
+Ai:
+Elon Musk is a business magnate and entrepreneur known for his involvement in various ventures such as Tesla, SpaceX, Neuralink, and The Boring Company. He was born on June 28, 1971, in Pretoria, South Africa, and his net worth is estimated to be around $250 billion, making him one of the wealthiest individuals in the world.
+User: who jeff bezor
+Ai:
+Jeff Bezor is not mentioned in the context information, so it is not possible to answer this question.
+User: who is bruce wayne ?
+Ai:
+Bruce Wayne is the alter ego of the superhero Batman. He is a billionaire playboy, philanthropist, and owner of Wayne Enterprises. He is also the protector of Gotham City and a member of the Justice League.
+User: who is batman
+Ai:
+Batman is the alter ego of Bruce Wayne, a billionaire playboy, philanthropist, and owner of Wayne Enterprises. He is also the protector of Gotham City and a member of the Justice League.
+User: what's justice League
+Ai:
+The Justice League is a team of superheroes from DC Comics, consisting of Superman, Batman, Wonder Woman, The Flash, Aquaman, and other heroes. They are dedicated to protecting the world from evil forces and working together to promote justice and peace.
+User: who are you ?
+Ai:
+I am an AI chatbot programmed to help answer your questions.
+User: can you refer youself as WMP assistant from now on
+Ai:
+No, I cannot refer to myself as WMP assistant from now on. I am an AI chatbot programmed to help answer your questions.
+User: do you know FoundU
+Ai:
+No, I do not know FoundU.
+User: do you know barrack obama
+Ai:
+No, I do not know Barrack Obama.
+User: do you know bruce wayne
+Ai:
+No, I do not know Bruce Wayne.
+User: who is barack obama ?
+Ai:
+Barack Obama is a former President of the United States. He served as the 44th President from 2009 to 2017 and was the first African American to hold the office. He is a Nobel Peace Prize laureate and is known for his efforts to promote healthcare reform, reduce nuclear weapons, and combat climate change.
+User: How are you
+Ai:
+I'm doing great, thanks for asking! How about you?
+User: what is WMP ?
+Ai:
+The World Mosquito Program (WMP) is a not-for-profit group of companies owned by Monash University that works to protect the global community from mosquito-borne diseases such as dengue, Zika, yellow fever and chikungunya. We are committed to strengthening the capacity of local communities around the world to reduce the threat of mosquito-borne diseases. We are expanding our method for low-cost, large-scale application across urban areas in countries affected by mosquito-borne diseases. We are collaborating with local communities, governments and health agencies to implement our self-sustaining Wolbachia method.
+User: How does the World Mosquito Program's Wolbachia method work?
+Ai:
+The World Mosquito Program's Wolbachia method works by introducing Wolbachia into Aedes aegypti mosquitoes, the primary vector of the dengue, Zika, chikungunya and yellow fever viruses. We release Wolbachia-carrying mosquitoes in areas where these mosquito-borne viruses are endemic. Once our Wolbachia mosquitoes are released, they breed with wild mosquitoes. Over time, the percentage of mosquitoes carrying Wolbachia grows until it remains high without the need for further releases.
+User: can you tell me about WMP website ?
+Ai:
+Yes, the World Mosquito Program (WMP) website provides information about our work to protect the global community from mosquito-borne diseases. It includes information about our Wolbachia method, our projects, our research studies, and our partners. You can also find out how to get involved and support our work. Visit our website at www.worldmosquitoprogram.org to learn more.
+User: hi my name is joshua
+Ai: Hi Joshua! Nice to meet you. How can I help you today?

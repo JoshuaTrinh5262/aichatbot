@@ -11,8 +11,14 @@ with open("server/store/chat_history.txt", "r") as file:
     # Read all lines from the file into a list
     lines = file.readlines()
 
+# Open the text file in read mode
+with open("server/store/index_chat_history.txt", "r") as file:
+    # Read all lines from the file into a list
+    index_lines = file.readlines()
+
 #load chat_history here
 store_conversation = [line.strip() for line in lines]
+index_store_conversation = [line.strip() for line in index_lines]
 
 chat = ChatGPT()
 
@@ -22,12 +28,12 @@ def index():
     response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
     return response
 
-#  Post chatgpt by indext
+#  Post chatgpt by index
 @app.route('/api/chatgptbyindex', methods=['Post'])
 def post_chatgptbyindex():
     data = request.get_json()  # Get JSON data from the request body
     print(data['prompt'])
-    data = chat.CustomChatGptByIndex(data['prompt'], store_conversation)
+    data = chat.CustomChatGptByIndex(data['prompt'], index_store_conversation)
     response = jsonify(data)
     response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
     return response

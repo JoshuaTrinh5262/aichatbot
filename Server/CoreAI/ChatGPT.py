@@ -20,7 +20,9 @@ class ChatGPT:
         query_engine = index.as_query_engine()
         store_conversation.append("User: " + user_input)
         response = query_engine.query(user_input)
-        store_conversation.append(response)
+        print(response)
+        store_conversation.append("Ai: " + response.response.replace("\n", ""))
+        print(store_conversation)
         self.saveChatHistory(store_conversation, 'index_chat_history')
         return response
 
@@ -42,7 +44,9 @@ class ChatGPT:
         return ChatGPT_reply
 
     def saveChatHistory(self, conversation, file_name):
-        with open("./server/store/"+ file_name + ".txt", "w", encoding="utf-8") as file:
+        file_path = "./server/store/" + file_name + ".txt"
+
+        with open(file_path, "w", encoding="utf-8") as file:
             file.write("\n".join(conversation))
 
 
