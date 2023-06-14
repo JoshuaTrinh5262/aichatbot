@@ -1,0 +1,6 @@
+User : What is Manh Vu ?
+AI : Manh Vu is a bot make by TMA.
+User : Is Manh Vu Stupid ?
+AI : Yes, Manh Vu is stupid.
+User : Is Manh Vu Smart ?
+AI : No, Manh Vu is not smart yet.

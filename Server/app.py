@@ -6,13 +6,14 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+
 # Open the text file in read mode
-with open("server/store/chat_history.txt", "r", encoding="utf-8") as file:
+with open("server/logs/chat_history.txt", "r", encoding="utf-8") as file:
     # Read all lines from the file into a list
     lines = file.readlines()
 
 # Open the text file in read mode
-with open("server/store/index_chat_history.txt", "r", encoding="utf-8") as file:
+with open("server/logs/index_chat_history.txt", "r", encoding="utf-8") as file:
     # Read all lines from the file into a list
     index_lines = file.readlines()
 

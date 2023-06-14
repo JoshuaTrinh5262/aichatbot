@@ -5,19 +5,18 @@ from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader
 
 class ChatGPT: 
     vopenai = openai
-
+    index = []
     # Constructor (initialize instance)
     def __init__(self):
         # Instance attributes
         config = dotenv.dotenv_values("./.env")
         self.vopenai.api_key = config['OPENAI_API_KEY']
         os.environ["OPENAI_API_KEY"] = config['OPENAI_API_KEY']
+        self.documentsIndex()
 
     def CustomChatGptByIndex(self, user_input, store_conversation):
-        documents = SimpleDirectoryReader('./server/store').load_data()
-        index = GPTVectorStoreIndex.from_documents(documents)
         
-        query_engine = index.as_query_engine()
+        query_engine = self.index.as_query_engine()
         store_conversation.append("User: " + user_input)
         response = query_engine.query(user_input)
         print(response)
@@ -44,7 +43,7 @@ class ChatGPT:
         return ChatGPT_reply
 
     def saveChatHistory(self, conversation, file_name):
-        file_path = "./server/store/" + file_name + ".txt"
+        file_path = "./server/logs/" + file_name + ".txt"
 
         with open(file_path, "w", encoding="utf-8") as file:
             file.write("\n".join(conversation))
@@ -52,3 +51,7 @@ class ChatGPT:
 
     def testapi(self):
         return "AAAA"
+    
+    def documentsIndex(self):
+        documents = SimpleDirectoryReader('./server/store').load_data()
+        self.index = GPTVectorStoreIndex.from_documents(documents)
