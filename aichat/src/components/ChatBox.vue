@@ -75,6 +75,7 @@ export default {
         this.fullWidth = false
       }
     },
+
     async sendMessage(message) {
       this.currentMessage = '';
       this.messages.push({
@@ -126,10 +127,12 @@ export default {
     top: 0;
     right: 2px;
     z-index: 1000;
+    transition: width 0.4s;
   }
 
   .container {
     height: auto;
+    max-height: 600px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -165,7 +168,7 @@ export default {
 
 
   .messageBox {
-    max-height: 700px;
+    max-height: 600px;
     overflow-y: auto;
     padding: 0 16px;
     border-top: 1px solid #f0f0f0;
