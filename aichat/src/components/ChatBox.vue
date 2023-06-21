@@ -41,6 +41,15 @@
           @keyup.enter="sendMessage(currentMessage)"
         />
         <button
+          v-if="currentMessage==''"
+          disabled
+          @click="sendMessage(currentMessage)"
+          class="askButton"
+        >
+          Ask
+        </button>
+        <button
+          v-if="currentMessage!=''"
           @click="sendMessage(currentMessage)"
           class="askButton"
         >
@@ -100,6 +109,13 @@ export default {
 
 <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+  button:disabled,
+  button[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
 
   .icon-user {
     background: #6c6c60;
