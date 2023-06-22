@@ -96,10 +96,10 @@ export default {
           prompt: message,
         })
        .then((response) => {
-        console.log(response.data.response)
+        console.log(response.data)
         this.messages.push({
-          from: 'chatGpt',
-          data: response.data.response, // Access the 'data' property of the response object
+          from: 'bard',
+          data: response.data,
         });
       });
     },
