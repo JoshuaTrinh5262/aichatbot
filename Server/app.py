@@ -43,5 +43,16 @@ def post_chatgpt():
     response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
     return response
 
+# Post bard
+@app.route('/api/bard', methods=['Post'])
+def post_bard():
+    data = request.get_json()  # Get JSON data from the request body
+    print(data['prompt'])
+    data = chat.customBard(data['prompt'])
+    response = jsonify(data)
+    response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
+    return response
+
+
 if __name__ == '__main__':
     app.run(debug=True) 
