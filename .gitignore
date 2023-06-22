@@ -1,9 +1,9 @@
-
 aichat/node_modules/
-server/CoreAI/__pycache__/
 aichat/yarn.lock
 aichat/package-lock.json
-.env
-crawling/__pycache__/domain_extraction.cpython-311.pyc
-.env
+
+server/CoreAI/__pycache__/
+
+crawling/__pycache__/
+
 .env
