@@ -1,0 +1,129 @@
+    /* Add your custom styles here */
+    body {
+      min-width: 400px;
+      min-height: 500px;
+      background-color: cyan;
+    }
+  
+    .chat-box {
+      position: fixed;
+      width: 400px;
+      height: 500px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+    }
+
+    .chat-header {
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: #f5f5f5;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .chat-messages {
+      flex-grow: 1;
+      padding: 10px;
+      overflow-y: scroll;
+      background-color: #f5f5f5;
+    }
+
+    .chat-footer {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-color: #fff;
+      border-top: 1px solid #ccc;
+    }
+
+    .chat-footer input[type="text"] {
+      flex-grow: 1;
+      padding: 5px;
+    }
+
+    .chat-footer button {
+      margin-left: 10px;
+    }
+
+    .message {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .user-avatar {
+      background-color: #e2f0cb;
+    }
+
+    .bot-avatar {
+      background-color: #d1d8e0;
+    }
+
+    .user-message {
+      background-color: #e2f0cb;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    .bot-message {
+      background-color: #d1d8e0;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    .user-message .avatar {
+      background-color: red;
+    }
+
+    .bot-message .avatar {
+      background-color: yellow;
+    }
+
+    .error {
+      border: 1px solid red;
+  }
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-button {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+  }
+  
+  .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

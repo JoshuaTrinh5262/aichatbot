@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Box</title>
+  <script src="background.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-box">
+            <div class="chat-header">
+                <h2>Chat Bot</h2>
+                <div class="dropdown">
+                    <button class="dropdown-button">...</button>
+                    <div class="dropdown-content">
+                      <a href="#">Option 1</a>
+                      <a href="#">Option 2</a>
+                      <a href="#">Option 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-messages">
+                <div class="message user-message">
+                    <div class="avatar user-avatar" alt="Bot"></div>
+                    <div>Hello!</div>
+                </div>
+                <div class="message bot-message">
+                    <div class="avatar bot-avatar"  alt="Human"></div>
+                    <div>Hi there! How can I assist you today?</div>
+                </div>
+                <div class="message user-message">
+                    <div class="avatar user-avatar"  alt="Bot"></div>
+                    <div>Hello!</div>
+                </div>
+                <div class="message bot-message">
+                    <div class="avatar bot-avatar" alt="Human"></div>
+                    <div>Hi there!</div>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <form id="messageForm">
+                    <input type="text" id="messageInput" placeholder="Type your message here">
+                    <button type="submit" id="sendButton">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
