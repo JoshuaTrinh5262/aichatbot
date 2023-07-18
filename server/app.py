@@ -1,7 +1,8 @@
-from urllib import response
-from CoreAI.ChatGPT import ChatGPT
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+
+from CoreAI.ChatGPT import ChatGPT
+from CoreAI.telegram_bot import telegram_bot
 
 app = Flask(__name__)
 CORS(app)
@@ -24,17 +25,17 @@ index_store_conversation = [line.strip() for line in index_lines]
 chat = ChatGPT()
 
 #  Post chatgpt by index
-@app.route('/api/chatgptbyindex', methods=['Post'])
+@app.route('/api/chatgptbyindex', methods = ['POST'])
 def post_chatgptbyindex():
-    data = request.get_json()  # Get JSON data from the request body
-    print(data['prompt'])
-    data = chat.CustomChatGptByIndex(data['prompt'], index_store_conversation)
-    response = jsonify(data)
-    response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
-    return response
+    requestData = request.get_json()  # Get JSON data from the request body
+    print(requestData['prompt'])
+    data = chat.CustomChatGptByIndex(requestData['prompt'], index_store_conversation)
+    print(type(data))
+    # response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
+    return str(data)
 
 # Post chatgpt
-@app.route('/api/chatgpt', methods=['Post'])
+@app.route('/api/chatgpt', methods=['POST'])
 def post_chatgpt():
     data = request.get_json()  # Get JSON data from the request body
     print(data['prompt'])
@@ -44,7 +45,7 @@ def post_chatgpt():
     return response
 
 # Post bard
-@app.route('/api/bard', methods=['Post'])
+@app.route('/api/bard', methods=['POST'])
 def post_bard():
     data = request.get_json()  # Get JSON data from the request body
     print(data['prompt'])
@@ -53,6 +54,5 @@ def post_bard():
     response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
     return response
 
-
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(debug = True)
