@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-from CoreAI.ChatGPT import ChatGPT
+from server.CoreAI.chat_gpt import ChatGPT
 from CoreAI.telegram_bot import telegram_bot
 
 app = Flask(__name__)
