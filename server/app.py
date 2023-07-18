@@ -7,7 +7,6 @@ from CoreAI.telegram_bot import telegram_bot
 app = Flask(__name__)
 CORS(app)
 
-
 # Open the text file in read mode
 with open("server/logs/chat_history.txt", "r", encoding="utf-8") as file:
     # Read all lines from the file into a list
@@ -28,17 +27,13 @@ chat = ChatGPT()
 @app.route('/api/chatgptbyindex', methods = ['POST'])
 def post_chatgptbyindex():
     requestData = request.get_json()  # Get JSON data from the request body
-    print(requestData['prompt'])
     data = chat.CustomChatGptByIndex(requestData['prompt'], index_store_conversation)
-    print(type(data))
-    # response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
     return str(data)
 
 # Post chatgpt
 @app.route('/api/chatgpt', methods=['POST'])
 def post_chatgpt():
     data = request.get_json()  # Get JSON data from the request body
-    print(data['prompt'])
     data = chat.CustomChatGPT(data['prompt'], store_conversation)
     response = jsonify(data)
     response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
@@ -48,7 +43,6 @@ def post_chatgpt():
 @app.route('/api/bard', methods=['POST'])
 def post_bard():
     data = request.get_json()  # Get JSON data from the request body
-    print(data['prompt'])
     data = chat.customBard(data['prompt'])
     response = jsonify(data)
     response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
