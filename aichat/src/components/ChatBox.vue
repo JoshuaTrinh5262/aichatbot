@@ -18,7 +18,7 @@
           </span>
         </span>
         <div style="flex-grow: 1;">
-          <h1>Help Center</h1>
+          <h1>ChatGPT Chatbox</h1>
         </div>
       </div>
       
@@ -62,8 +62,8 @@
 
 <script>
 import axios from 'axios';
-import bot from './../images/bot.svg'
-import user from './../images/user.svg'
+import bot from './../assets/images/bot.svg'
+import user from './../assets/images/user.svg'
 
 export default {
   name: 'ChatBox',
@@ -96,10 +96,10 @@ export default {
           prompt: message,
         })
        .then((response) => {
-        console.log(response.data.response)
+        console.log(response)
         this.messages.push({
           from: 'chatGpt',
-          data: response.data.response, // Access the 'data' property of the response object
+          data: response.data, // Access the 'data' property of the response object
         });
       });
     },
