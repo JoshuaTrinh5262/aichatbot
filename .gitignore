@@ -4,6 +4,8 @@ aichat/package-lock.json
 
 server/CoreAI/__pycache__/
 server/admin/__pycache__/
+server/index
+server/store
 
 crawling/__pycache__/
 
