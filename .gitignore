@@ -2,8 +2,9 @@ aichat/node_modules/
 aichat/yarn.lock
 aichat/package-lock.json
 
-server/CoreAI/__pycache__/
+server/core_ai/__pycache__/
 server/admin/__pycache__/
+
 server/index
 server/store
 
