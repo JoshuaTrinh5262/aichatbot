@@ -3,6 +3,7 @@ aichat/yarn.lock
 aichat/package-lock.json
 
 server/CoreAI/__pycache__/
+server/admin/__pycache__/
 
 crawling/__pycache__/
 
