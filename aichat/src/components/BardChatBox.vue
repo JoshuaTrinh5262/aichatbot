@@ -18,19 +18,19 @@
           </span>
         </span>
         <div style="flex-grow: 1;">
-          <h1>Bard</h1>
+          <h1>Bard Chatbox</h1>
         </div>
       </div>
       
       <div class="messageBox mt-8">
-        <template v-for="(message, index) in messages" :key="index">
-          <div :class="message.from == 'user' ? 'messageFromUser' : 'messageFromChatGpt'">
-            <img class="icon-user" :src="message.from == 'user' ? user : bot">
-            <div :class="message.from == 'user' ? 'userMessageWrapper' : 'chatGptMessageWrapper'">
-              <div :class="message.from == 'user' ? 'userMessageContent' : 'chatGptMessageContent'">{{ message.data }}</div>
+          <template v-for="(message, index) in messages" :key="index">
+            <div :class="message.from == 'user' ? 'messageFromUser' : 'messageFromChatGpt'">
+              <img class="icon-user" :src="message.from == 'user' ? user : bot">
+              <div :class="message.from == 'user' ? 'userMessageWrapper' : 'chatGptMessageWrapper'">
+                <div :class="message.from == 'user' ? 'userMessageContent' : 'chatGptMessageContent'">{{ message.data }}</div>
+              </div>
             </div>
-          </div>
-        </template>
+          </template>
       </div>
       <div class="inputContainer">
         <input
@@ -62,8 +62,8 @@
 
 <script>
 import axios from 'axios';
-import bot from './../images/bot.svg'
-import user from './../images/user.svg'
+import bot from './../assets/images/bot.svg'
+import user from './../assets/images/user.svg'
 
 export default {
   name: 'BardChatBox',
