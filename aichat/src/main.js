@@ -6,14 +6,15 @@ import ChatBox from './components/ChatBox.vue'
 import BardChatBox from './components/BardChatBox.vue'
 import MainComponent from './components/MainComponent.vue'
 import SettingComponent from './components/SettingComponent.vue'
-
+import ErrorComponent from './components/ErrorComponent.vue'
 
 
 const routes = [
+    { path: '/', name: 'MainComponent', component: MainComponent },
     { path: '/chatgpt', name: 'ChatBox', component: ChatBox },
     { path: '/bard', name: 'BardChatBox', component: BardChatBox },
     { path: '/setting', name: 'SettingComponent', component: SettingComponent },
-    { path: '/', name: 'MainComponent', component: MainComponent },
+    { path: '/:pathMatch(.*)*', name: 'ErrorComponent', component: ErrorComponent },
   ]
 
 const router = createRouter({

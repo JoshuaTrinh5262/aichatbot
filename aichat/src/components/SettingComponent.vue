@@ -6,7 +6,7 @@
 
 <script>
 export default {
-name: 'SettingComponent',
+  name: 'SettingComponent',
 }
 </script>
 
