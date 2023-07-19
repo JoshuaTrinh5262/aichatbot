@@ -1,19 +1,29 @@
 <template>
-    <div class="main">
-      <h3>Bot</h3>
+  <div>
+    <div class="button-list">
+      <h3 class="button-heading">Chat Bot</h3>
       <ul>
         <li>
-            <a href="/chatgpt">ChatGPT</a>
+            <a href="/chatgpt">ChatGPT Chat Box</a>
         </li>
         <li>
-            <a href="/bard">Bard</a>
-        </li>
-        <li>
-            <a href="/setting">Setting</a>
+            <a href="/bard">Bard Chat Box</a>
         </li>
       </ul>
     </div>
-  </template>
+    <div class="button-list">
+      <h3 class="button-heading">Setting</h3>
+      <ul>
+        <li>
+            <a href="/setting">Setting</a>
+        </li>
+        <li>
+          <a href="/test">404</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
   
   <script>
   export default {
@@ -23,19 +33,35 @@
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
-  h3 {
-    margin: 40px 0 0;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  a {
-    color: #42b983;
-  }
+.button-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.button-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.button-list li {
+  display: inline-block;
+}
+
+.button-list li a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4285f4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button-list li a:hover {
+  background-color: #3367d6;
+}
   </style>
   

@@ -3,7 +3,7 @@ from flask import Flask
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from typing import Final
-from server.CoreAI.chat_gpt import ChatGPT
+from chat_gpt import ChatGPT
 import dotenv
 
 config = dotenv.dotenv_values("./.env")
