@@ -1,9 +1,8 @@
 # pip install python-telegram-bot
-from flask import Flask
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from typing import Final
-from core_ai.chat_gpt import ChatGPT
+from core_ai.chat_bard import ChatBard
 import dotenv
 
 config = dotenv.dotenv_values("./.env")
@@ -14,8 +13,6 @@ print('Starting up bot...')
 
 TOKEN: Final = teleram_token
 BOT_USERNAME: Final = teleram_username
-
-chat = ChatGPT()
 
 # Lets us use the /start command
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -32,7 +29,7 @@ async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def handle_response(text: str) -> str:
     # Create your own response logic
-    return chat.customBard(text)
+    return ChatBard().customBard(text)
 
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
