@@ -4,12 +4,13 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 from typing import Final
 from core_ai.chat_bard import ChatBard
 import dotenv
+import random
 
 config = dotenv.dotenv_values("./.env")
 teleram_token = config['TELEGRAM_BOT_TOKEN']
 teleram_username = config['TELEGRAM_BOT_USERNAME']
 
-print('Starting up bot...')
+print('Starting up telegram bot...')
 
 TOKEN: Final = teleram_token
 BOT_USERNAME: Final = teleram_username
@@ -26,6 +27,12 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Lets us use the /custom command
 async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('This is a custom command, you can add whatever text you want here.')
+
+async def random_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    random_integer = random.randint(1, 100)
+
+    await update.message.reply_text(random_integer)
+
 
 def handle_response(text: str) -> str:
     # Create your own response logic
@@ -66,6 +73,7 @@ def telegram_bot():
     bot.add_handler(CommandHandler('start', start_command))
     bot.add_handler(CommandHandler('help', help_command))
     bot.add_handler(CommandHandler('custom', custom_command))
+    bot.add_handler(CommandHandler('random', random_command))
 
     # Messages
     bot.add_handler(MessageHandler(filters.TEXT, handle_message))
@@ -73,6 +81,6 @@ def telegram_bot():
     # Log all errors
     bot.add_error_handler(error)
 
-    print('Polling...')
+    # print('Polling...')
     # Run the bot
-    bot.run_polling(poll_interval = 5)
+    bot.run_polling()
