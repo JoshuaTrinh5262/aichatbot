@@ -48,4 +48,5 @@ def post_bard():
     return response
 
 if __name__ == '__main__':
+    telegram_bot()
     app.run(debug = True)
