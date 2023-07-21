@@ -1,8 +1,6 @@
 import openai
 import dotenv
 import os
-from bardapi import Bard
-import requests
 from llama_index import GPTVectorStoreIndex, LLMPredictor, PromptHelper, SimpleDirectoryReader, VectorStoreIndex
 from llama_index import StorageContext, load_index_from_storage
 
@@ -16,7 +14,6 @@ class ChatGPT:
         # Instance attributes
         config = dotenv.dotenv_values("./.env")
         self.vopenai.api_key = config['OPENAI_API_KEY']
-        self.bard_token = config['BARD_TOKEN']
         os.environ["OPENAI_API_KEY"] = config['OPENAI_API_KEY']
         self.documentsIndex()
         # self.loadIndexFromStorage()
@@ -51,22 +48,6 @@ class ChatGPT:
         store_conversation.append(ChatGPT_reply)
         self.saveChatHistory(store_conversation, 'chat_history')
         return ChatGPT_reply
-
-    def customBard(self, user_input):
-        session = requests.Session()
-        session.headers = {
-                    "Host": "bard.google.com",
-                    "X-Same-Domain": "1",
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36",
-                    "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-                    "Origin": "https://bard.google.com",
-                    "Referer": "https://bard.google.com/",
-                }
-        
-        session.cookies.set("__Secure-1PSID", self.bard_token) 
-        bard = Bard(token = self.bard_token, session = session, timeout = 30)
-        response = bard.get_answer(user_input)['content']
-        return response
 
     def saveChatHistory(self, conversation, file_name):
         file_path = "./server/logs/" + file_name + ".txt"
