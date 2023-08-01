@@ -15,8 +15,8 @@ class ChatGPT:
         config = dotenv.dotenv_values("./.env")
         self.vopenai.api_key = config['OPENAI_API_KEY']
         os.environ["OPENAI_API_KEY"] = config['OPENAI_API_KEY']
-        self.documentsIndex()
-        # self.loadIndexFromStorage()
+        # self.documentsIndex()
+        self.loadIndexFromStorage()
 
     def CustomChatGptByIndex(self, user_input, store_conversation):
         #chatGPT

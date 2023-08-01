@@ -1,10 +1,13 @@
+import dotenv
+import random
+
 # pip install python-telegram-bot
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from typing import Final
+
 from core_ai.chat_bard import ChatBard
-import dotenv
-import random
+from core_ai.chat_gpt import ChatGPT
 
 config = dotenv.dotenv_values("./.env")
 teleram_token = config['TELEGRAM_BOT_TOKEN']
@@ -37,6 +40,7 @@ async def random_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def handle_response(text: str) -> str:
     # Create your own response logic
     return ChatBard().customBard(text)
+    # return ChatGPT().CustomChatGPT(text)
 
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):

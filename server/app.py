@@ -27,7 +27,10 @@ index_store_conversation = [line.strip() for line in index_lines]
 def post_chatgptbyindex():
     requestData = request.get_json()  # Get JSON data from the request body
     data = ChatGPT().CustomChatGptByIndex(requestData['prompt'], index_store_conversation)
-    return str(data)
+    response = jsonify({"data": str(data)})
+    response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
+    return response
+
 
 # Post chatgpt
 @app.route('/api/chatgpt', methods=['POST'])
@@ -48,5 +51,5 @@ def post_bard():
     return response
 
 if __name__ == '__main__':
-    telegram_bot()
+    # telegram_bot()
     app.run(debug = True)

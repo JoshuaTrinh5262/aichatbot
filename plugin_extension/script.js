@@ -2,6 +2,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const inputField = document.querySelector('.chat-footer input[type="text"]');
     const chatMessages = document.querySelector('.chat-messages');
+    const select = document.getElementById("selectOption");
+    const messageForm = document.getElementById("messageForm");
 
     messageForm.addEventListener('keydown', function(event) {
 
@@ -11,7 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (isValidMessage(message)) {
                 appendUserMessage(message);
-                responseBot(message)
+
+                if(select.value == 'bard') {
+                  bardResponse(message);
+                } else {
+                  chatgptResponse(message);
+                }
+
                 inputField.value = '';
                 clearError()
             } else {
@@ -19,6 +27,38 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+      // Handle form submission
+    messageForm.addEventListener("submit", function (event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+      const message = inputField.value.trim();
+      if (isValidMessage(message)) {
+        appendUserMessage(message);
+
+        if(select.value == 'bard') {
+          bardResponse(message);
+        } else {
+          chatgptResponse(message);
+        }
+
+        inputField.value = '';
+        clearError()
+      } else {
+          displayError('Invalid message. Please enter a valid message.');
+      }
+      // Your form processing logic here, if needed
+      // For example, you can access the selected value from the select element:
+      const selectedValue = select.value;
+      console.log("Selected value:", selectedValue);
+    });
+
+  // Handle select option change
+    select.addEventListener("change", function (event) {
+      // Your select option change logic here, if needed
+      const selectedValue = event.target.value;
+      console.log("Selected value:", selectedValue);
+    }); 
+
     function isValidMessage(message) {
         return message.length <= 100 && message !== '';
     }
@@ -68,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
     
-      function responseBot(prompt) {
+      function bardResponse(prompt) {
         fetch('http://127.0.0.1:5000/api/bard', {
           method: 'POST',
           headers: {
@@ -79,7 +119,23 @@ document.addEventListener('DOMContentLoaded', function() {
           .then(response => response.json())
           .then(data => {
             appendBotMessage(data)
-            console.log(data);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+      }
+
+      function chatgptResponse(prompt) {
+        fetch('http://127.0.0.1:5000/api/chatgptbyindex', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ prompt: prompt }),
+        })
+          .then(response => response.json())
+          .then(data => {
+            appendBotMessage(data.data)
           })
           .catch(error => {
             console.error(error);
