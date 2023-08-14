@@ -56,21 +56,34 @@ class ChatGPT:
             file.write("\n".join(conversation))
 
     def documentsIndex(self):
-        documents = SimpleDirectoryReader('./server/store').load_data()
-        self.index = VectorStoreIndex.from_documents(documents)
-        self.index.storage_context.persist(persist_dir="./server/index")
-        # llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0.1, model="gpt-3.5-turbo"))
+        try:
+            documents = SimpleDirectoryReader('./server/store').load_data()
+            self.index = VectorStoreIndex.from_documents(documents)
+            self.index.storage_context.persist(persist_dir="./server/test_index")
+            return True
+        except Exception as e:
+            print(f"An error occurred: {str(e)}")
+            return False
 
-        # max_input_size = 2048
-        # num_output = 100 
-        # max_chunk_overlap = 20
-        # chunk_overlap_ratio = 0.1
+    def documentsGptIndex(self):
+        try:
+            documents = SimpleDirectoryReader('./server/store').load_data()
+            llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0.1, model="gpt-3.5-turbo"))
+            max_input_size = 2048
+            num_output = 100 
+            max_chunk_overlap = 20
+            chunk_overlap_ratio = 0.1
 
-        # prompt_helper = PromptHelper(max_input_size, num_output, chunk_overlap_ratio, max_chunk_overlap)
+            prompt_helper = PromptHelper(max_input_size, num_output, chunk_overlap_ratio, max_chunk_overlap)
 
-        # self.index = GPTVectorStoreIndex.from_documents(
-        #     documents, llm_predictor = llm_predictor, prompt_helper = prompt_helper
-        # )
+            self.index = GPTVectorStoreIndex.from_documents(
+                documents, llm_predictor = llm_predictor, prompt_helper = prompt_helper
+            )
+            self.index.storage_context.persist(persist_dir="./server/test_gpt_index")
+            return True
+        except Exception as e:
+            print(f"An error occurred: {str(e)}")
+            return False
 
     def loadIndexFromStorage(self):
         # rebuild storage context

@@ -39,8 +39,8 @@ async def random_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def handle_response(text: str) -> str:
     # Create your own response logic
-    return ChatBard().customBard(text)
-    # return ChatGPT().CustomChatGPT(text)
+    # return ChatBard().customBard(text)
+    return ChatGPT().CustomChatGPT(text)
 
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):

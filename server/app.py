@@ -31,6 +31,19 @@ def post_chatgptbyindex():
     response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
     return response
 
+@app.route('/api/documentsindex', methods=['GET'])
+def get_documents_index():
+    # Call the documentsIndex function and get the result (success flag)
+    success = ChatGPT().documentsIndex()
+    # Return a JSON response with the success flag
+    return jsonify({"status": "success" if success else "error"})
+
+@app.route('/api/documentsgptindex', methods=['GET'])
+def get_documents_gpt_index():
+    # Call the documentsIndex function and get the result (success flag)
+    success = ChatGPT().documentsGptIndex()
+    # Return a JSON response with the success flag
+    return jsonify({"status": "success" if success else "error"})
 
 # Post chatgpt
 @app.route('/api/chatgpt', methods=['POST'])
