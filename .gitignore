@@ -8,6 +8,8 @@ server/admin/__pycache__/
 
 server/index
 server/store
+server/test_index
+server/test_gpt_index
 
 crawling/__pycache__/
 
